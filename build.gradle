@@ -3,10 +3,20 @@ plugins {
     id "org.springframework.boot" version "1.5.9.RELEASE"
 }
 
+bootRun.environment([
+        "WELCOME_MESSAGE": "hello env",
+])
+
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+])
+
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
