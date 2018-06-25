@@ -4,7 +4,7 @@ plugins {
 }
 
 bootRun.environment([
-        "WELCOME_MESSAGE": "hello env",
+        "WELCOME_MESSAGE": "hello",
 ])
 
 test.environment([
